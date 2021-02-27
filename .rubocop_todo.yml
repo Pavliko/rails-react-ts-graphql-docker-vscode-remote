@@ -1,0 +1,173 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 2.7.2
+  Exclude:
+    - "db/seeds/**/*"
+    - "bin/**/*"
+
+Style/MixinUsage:
+  Exclude:
+    - spec/spec_helper.rb
+    - "spec/**/*"
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
+
+RSpec/NestedGroups:
+  Max: 8
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 25
+
+Rails/BulkChangeTable:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Exclude:
+    - "spec/requests/**/*"
+
+Style/Documentation:
+  Enabled: false
+
+Lint/Debugger:
+  Enabled: true
+  Exclude: []
+
+RSpec/Focus:
+  Enabled: true
+  Exclude: []
+
+Rails/Output:
+  Enabled: true
+  Exclude:
+    - "db/seeds.rb"
+
+Rails/FindEach:
+  Enabled: true
+  Exclude: []
+
+Rails/UniqBeforePluck:
+  Enabled: true
+  Exclude: []
+
+Layout/LineLength:
+  Max: 130
+  Exclude:
+    - "spec/factories/**/*"
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Metrics/BlockLength:
+  Exclude:
+    - "lib/tasks/**/*"
+    - "spec/**/*"
+    - "db/**/*"
+    - "Guardfile"
+
+Metrics/AbcSize:
+  Exclude:
+    - "lib/tasks/brands.rake"
+    - "db/**/*"
+
+Metrics/ClassLength:
+  Max: 100
+  Exclude:
+    - "app/graphql/types/query_type.rb"
+
+Metrics/CyclomaticComplexity:
+  Max: 12
+  Exclude:
+    - "lib/tasks/brands.rake"
+
+Metrics/MethodLength:
+  Max: 10
+  Exclude:
+    - "lib/tasks/brands.rake"
+    - "db/**/*"
+
+Style/WordArray:
+  Enabled: false
+
+Style/MutableConstant:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Style/GlobalVars:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - "lib/tasks/brands.rake"
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - "Gemfile"
+    - "lib/tasks/**/*"
+    - "db/**/*"
+
+Lint/NonDeterministicRequireOrder:
+  Enabled: false
+
+Lint/SuppressedException:
+  Exclude:
+    - "lib/tasks/brands.rake"
+
+Rails/CreateTableWithTimestamps:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  Exclude:
+    - "app/graphql/types/query_type.rb"
+    - "app/graphql/mutations/update_brand.rb"
+    - "app/graphql/mutations/update_brands_brand_traffic_type.rb"
+
+Style/CommentAnnotation:
+  Exclude:
+    - Guardfile
+
+RSpec/VerifiedDoubles:
+  Enabled: false
